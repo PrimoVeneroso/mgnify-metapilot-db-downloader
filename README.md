@@ -1,4 +1,4 @@
-# mgnify-metapilot-db
+# mgnify-metapilot-db-downloader
 
 Download an [MGnify](https://www.ebi.ac.uk/metagenomics/browse/genomes) genome catalogue
 (default: **human-gut v3.0**, 6,461 species) and turn it into a folder that
