@@ -1,0 +1,19 @@
+# Downloaded data (never commit: ~15 GB)
+MGnify_MAG_DB/
+MGnify_TEST/
+*.faa
+*_eggNOG.tsv
+*.gz
+*.part
+.download_work/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,20 @@
+name: check
+on: [push, pull_request]
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Python quick download test (2 species)
+        run: python mgnify_metapilot_db.py -o MGnify_TEST -n 2 -j 2
+      - name: Bash syntax + quick test
+        if: runner.os == 'Linux'
+        run: |
+          bash -n download_mgnify_mag_db.sh
+          ./download_mgnify_mag_db.sh -o MGnify_TEST_SH -n 2 -j 2
